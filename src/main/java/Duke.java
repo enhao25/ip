@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Tasks.Task;
+
 public class Duke {
     public static void main(String[] args) {
         // Output initial greeting before asking for input
@@ -23,7 +25,10 @@ public class Duke {
                 // Exit when the user inputs "bye"
                 System.out.println("Bye. Hope to see you again soon!");
                 break;
-            } else if(userInput.equals("list")) {
+            } else if (userInput.equals("list")) {
+                // Print the list of task
+                System.out.println("Here are the tasks in your list:");
+
                 // Shows the list of user inputs with its numbering starting from 1
                 for (int index = 0; index < taskList.size(); index++) {
                     System.out.println(index + 1 + ". " + taskList.get(index).getTask());
@@ -50,5 +55,7 @@ public class Duke {
             }
 
         }
+
+        sc.close();
     }
 }
